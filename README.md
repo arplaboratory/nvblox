@@ -12,7 +12,7 @@ At the time of this writing, the lab uses JetPack 5.1.2, which installs CMake ve
 cmake --version
 ```
 ### 2) The CUDA compiler identification is unknown. Failed to detect a default CUDA architecture.
-This occurs because CMake couldn't find the Nvidia CUDA comiler (NVCC).
+This occurs because CMake couldn't find the Nvidia CUDA compiler (NVCC).
 1. Make sure you have installed CUDA. You can see if its installed by running 
 ```
 jtop
