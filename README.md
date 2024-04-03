@@ -4,7 +4,8 @@ NvBlox package for ROS 2 Humble based online mapping for the Agile Robotics and 
 ## Prerequisites
 1) ROS 2 Humble
 2) CUDA
-3) CMake version >= 3.22
+3) NVIDIA VPI
+4) CMake version >= 3.22
 ## Common issues while building
 ### 1) CMake version is too low
 At the time of this writing, the lab uses JetPack 5.1.2, which installs CMake version 3.16.3 by default. Please check the CMake version by running the command:
@@ -17,7 +18,11 @@ This occurs because CMake couldn't find the Nvidia CUDA compiler (NVCC).
 ```
 jtop
 ```
-and navigating to the INFO section where the CUDA version is displayed. If the CUDA version is not displayed and instead says NO, it means CUDA is not installed.
+and navigating to the INFO section where the CUDA version is displayed. If the CUDA version is not displayed and instead says NO, it means CUDA is not installed.To install CUDA and VPI, run the command:
+```
+sudo apt-get install nvidia-jetpack
+```
+This will install both CUDA and VPI libraries on the Jetson.
 
 2. Make sure the PATH variable in the environment contains the path to where the CUDA compiler (NVCC) is installed. You can see if this is the case by running the command:
 ```
