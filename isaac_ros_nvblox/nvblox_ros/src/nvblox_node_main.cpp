@@ -32,7 +32,7 @@ int main(int argc, char * argv[])
   FLAGS_alsologtostderr = true;
   google::InstallFailureSignalHandler();
   rclcpp::init(argc, argv);
-
+  std::cout << "SONO QUI" << std::endl;
   // Warmup CUDA so it doesn't affect our timings *as* much for the first
   // CUDA call.
   nvblox::warmupCuda();
